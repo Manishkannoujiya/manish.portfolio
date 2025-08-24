@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Manish Kannoujiya Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Manish Kannoujiya</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img" style="background-image:url(image.jpg);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Manish Kannoujiya</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Mechanical Engineer  ',
+										'Programmer  ',
+										'Data Analyst    ',
+										'Web Developer   ',
+										'Data Scientist    ',
+
+
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A Mechanical Engineer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p><a href="https://www.linkedin.com/in/manish-kumar-845955269/"
+										class="btn btn-primary py-3 px-4">LinkedIn</a>
+									<a href="https://github.com/Manishkannoujiya"
+										class="btn btn-white btn-outline-white py-3 px-4">GitHub</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="new.jpg" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s"></span> <span>Manish Kannoujiya</span></p>
+											<p><span class="title-s"></span> <span>Aspiring Data
+													Analyst and Mechanical Engineer</span>
+											</p>
+											<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span>
+											</p> -->
+											<p><span class="title-s">Address: </span> <span>Varanasi, Uttar Pradesh
+													India</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>PYTHON</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<span>PowerBI</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<span>Tableau</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+
+									<span>C++</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>HTML</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>CSS</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>I am a passionate Final year Under Graduate at Indian Institute of Technology Kanpur,
+									specializing in Mechanical Engineering
+									with a deep-rooted interest in bridging the gap between traditional engineering
+									principles and modern computational technologies. My journey has been shaped not
+									only by core mechanical concepts like thermodynamics, mechanics, and design but also
+									by powerful tools from the world of computer science. With hands-on proficiency in
+									Python, C++, SQL, Machine Learning and many more, I strive to develop smart,
+									data-driven solutions to complex engineering problems.
+
+									This portfolio is a curated collection of my academic projects, technical
+									achievements, and interdisciplinary explorations—ranging from simulation and
+									automation to predictive modeling and data analytics. Through this blend of
+									mechanical insight and programming expertise, I aim to contribute to innovative,
+									scalable, and intelligent engineering systems.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Analyst &amp; Mechanical
+											Engineer</span>
+									</li>
+									<li class="d-flex"><span>Domain:</span> <span>Industrial Data Analytics,
+
+											Supply Chain Optimization,
+
+											Manufacturing Process Analytics
+
+
+
+											&amp;
+											Energy Systems Modeling
+										</span></li>
+									<li class="d-flex"><span>Education:</span> <span>B-Tech In Mechanical
+											Engineering(IIT Kanpur)</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI &amp;
+											Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>HTML,CSS, Excel, Git,MATLAB,
+											FUSION-360,ReactJS,Canva, Latex,PostgreSQL
+										</span></li>
+									<li class="d-flex"><span>Interest:</span> <span> Listening Music, Traveling, Singing
+											, Watching Movies
+											&amp Series , Learning
+										</span></li>
+
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="15">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/manish-kumar-845955269/"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2"><a
+							href="https://github.com/Manishkannoujiya/Resume/blob/main/First%20Master%20Resume.pdf"> <a>
+								Resume </h1>
+					<h2 class="mb-4"> <a
+							href="https://github.com/Manishkannoujiya/Resume/blob/main/First%20Master%20Resume.pdf">
+						</a> Resume</h2>
+					<p>Aspiring Mechanical Engineer with a strong foundation in core engineering principles and a
+						growing expertise in computational technologies.
+						Passionate about applying analytical and programming skills to solve real-world mechanical
+						problems and drive innovation across interdisciplinary domains.
+
+
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Work Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">15 June - 31st July,2025</span>
+						<h2>Space Technology - Summer Internship</h2>
+						<span class="position">Indian Space Lab</span>
+						<p class="mt-4">India Space Lab is dedicated to promoting space science and technology across
+							India. Through a variety of hands-on workshops, interactive courses, and engaging
+							educational programs, India Space Lab aims to inspire students and educators alike.
+						<ul>
+							<li>Participated in hands-on training sessions covering Advanced Drone Technology (Air
+								Taxi), Rocketry, and CanSat/CubeSat satellite systems, gaining practical insights into
+								aerospace and unmanned aerial vehicle technologies.
+
+							</li>
+							<li>Explored the applications of Remote Sensing (GIS) and Disaster Management, learning how
+								spatial data and geospatial tools aid in environmental monitoring and crisis response.
+							</li>
+							<li>Engaged in Space Astronomy and Space Entrepreneurship sessions to understand celestial
+								science, space innovation, and the business landscape of the space sector.</li>
+							<li>Contributed to a project focused on Technology and Official Documentation while also
+								attending a Space Webinar on Education & Employment, expanding my understanding of
+								career pathways and institutional frameworks in space research.
+
+							</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June-Present,2025</span>
+						<h2>Micro EV - Project </h2>
+						<span class="position">Indian Institute of Technology Kanpur</span>
+						<p class="mt-4">Currently working on a Micro Electric Vehicle (MEV) design project under the
+							guidance of Professor Amrendra Edgupanti at IIT Kanpur, focusing on 3D modeling and chassis
+							design.
+						<ul>
+							<li>Contributed to a research project on Micro Electric Vehicles (MEVs) at IIT Kanpur,
+								focusing on the design and structural development of a compact electric car prototype.
+							</li>
+							<li>Designed a detailed 3D model of the MEV using Autodesk Fusion 360, integrating
+								ergonomic, aerodynamic, and spatial efficiency considerations.
+
+							</li>
+
+							<li>Led the chassis design, ensuring strength, lightweight structure, and optimal support
+								for drivetrain and battery components under mechanical constraints.</li>
+
+							<li>Collaborated with a multidisciplinary team to align mechanical design with electrical
+								systems, optimizing for sustainability, performance, and urban mobility needs.</li>
+							<li>Collaborated with team members to align the mechanical design with battery placement,
+								drive system, and suspension requirements.</li>
+							<li>Gained hands-on experience in CAD modeling, vehicle dynamics, and prototyping,
+								contributing to sustainable automotive innovation.</li>
+
+
+							<!-- <li>Gained industry insights: Studied AI hierarchy, compared supervised vs. unsupervised
+								learning, and explored DL fundamentals.
+
+							</li> -->
+						</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">1st Feb - 31st March,2024</span>
+						<h2>AI Languify - Internship</h2>
+						<span class="position">Wissenaire'23(IIT Bhubneshwar)</span>
+						<p class="mt-4">Wissenaire which is the annual techno-management festival of the Indian
+							Institute of Technology (IIT) Bhubaneswar.
+						<ul>
+							<li>Applied core AI concepts (intelligent agents, adversarial search) to design a PEAS-based
+								language processing system, enhancing automated decision-making.
+
+							</li>
+							<li>Trained supervised/unsupervised models for language classification and clustering tasks.
+							</li>
+							<li>Built an Automatic Speech Recognition (ASR) System using deep learning architectures,
+								converting speech to text with Python libraries like NumPy and Pandas.</li>
+							<li>Demonstrated ability to bridge theoretical AI concepts with real-world applications like
+								speech recognition and Gained hands-on experience in the full AI project lifecycle—data
+								handling, model training, and performance evaluation.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">1st April-31st May,2025</span>
+						<h2>Artificial Intelligence,ML - Internship </h2>
+						<span class="position">Plasmid Innovation</span>
+						<p class="mt-4">Plasmid Innovation is a company, likely a private limited one, registered in
+							Bangalore, India. It appears to be involved in providing upskilling training, particularly
+							in domains with high market value, and offers mentorship from experienced industry
+							professionals.
+						<ul>
+							<li>Implemented supervised learning algorithms (Linear/Logistic Regression, SVM) and
+								unsupervised techniques (K-Means Clustering) from scratch.</li>
+							<li>Engineered data pipelines: Encoded categorical data, performed feature scaling, and
+								optimized datasets for model training.</li>
+							<li>Developed 2 end-to-end projects:
+								<ul>
+									<li>Spam News Detection: Built a classifier using NLP techniques to filter fake news
+										(accuracy: 99.55%).</li>
+
+									<li>Handwritten Digit Recognition: Designed a CNN model (or alternative) achieving
+										98.24%
+										accuracy on MNIST datasets.</li>
+								</ul>
+							</li>
+							<!-- <li>Gained industry insights: Studied AI hierarchy, compared supervised vs. unsupervised
+								learning, and explored DL fundamentals.
+
+							</li> -->
+						</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Nov - 17th Dec,2024</span>
+						<h2>Manager, Show Management </h2>
+						<span class="position">Inter IIT Sport Meet'24 - IIT Kanpur</span>
+						<p class="mt-4">Inter IIT Sports Meet is the annual sports tournament of the Indian Institutes
+							of Technology.It is the longest-running Inter-collegiate meet where all IITs participate,
+							having been held since 1961. In year 2024, the event was held at IIT Kanpur and IIT Indore
+							jointly.
+						<ul>
+							<li>Spearheaded a team of 50+ volunteers and coordinators to execute 10+ high-energy events
+								(opening/closing ceremonies, performances, award nights).
+
+							</li>
+							<li>Orchestrated real-time troubleshooting for technical failures (sound, lighting, staging)
+								during live shows, ensuring zero disruptions.
+							</li>
+							<li>Designed crowd management protocols that reduced logistical delays by 30% during peak
+								hours.</li>
+							<li>Handled real-time crisis management and backstage operations, resolving technical and
+								scheduling conflicts efficiently.</li>
+							<li>Oversaw audio-visual and stage production elements, ensuring synchronization with the
+								event narrative and audience engagement strategies.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug- 6th Oct,2024</span>
+						<h2>Organiser,Show Management</h2>
+						<span class="position">Udghosh'24 - IIT Kanpur</span>
+						<p class="mt-4">Udghosh is the Annual Sports Festival of Indian Institute of Technology
+							Kanpur.Started in 2002, it has now evolved into one of the largest college sports festivals
+							held in Asia. With notable sportspersons, brand ambassadors and participants from across the
+							country.
+						<ul>
+							<li>Led a team of 50+ volunteers and secretaries to organize 15+ high-energy events,
+								including opening/closing ceremonies, live performances, and award nights.</li>
+							<li>Coordinated logistics, scheduling, and technical setups
+								for seamless event execution.</li>
+
+							<li>Acted as the primary point of contact for artists, vendors, and sponsors, ensuring clear
+								communication and timely execution.</li>
+
+							<li>Collaborated with security and logistics teams to enforce safety protocols and manage
+								large crowds effectively.</li>
+							<li>Ensured seamless backstage operations, including live cue management, sound-light
+								synchronization, and real-time troubleshooting during the events.</li>
+
+
+							<!-- <li>Gained industry insights: Studied AI hierarchy, compared supervised vs. unsupervised
+								learning, and explored DL fundamentals.
+
+							</li> -->
+						</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-Present</span>
+						<h2>Bachelor of Technology</h2>
+						<span class="position">Indian Institute of Technology Kanpur</span>
+						<a href="https://en.wikipedia.org/wiki/IIT_Kanpur" class="position">.</a>
+						<p class="mt-4">Grade: 5.8/10 CGPA </p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2020-2021</span>
+						<h2>Intermediate Education</h2>
+						<span class="position">CM Anglo Bengali Inter College</span>
+						<a href="https://en.wikipedia.org/wiki/C.M._Anglo_Bengali_College" class="position">.</a>
+						<p class="mt-4">Grade: 85.4% </p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2019</span>
+						<h2>High School Education</h2>
+						<span class="position">CM Anglo Bengali Inter College</span>
+						<a href="https://en.wikipedia.org/wiki/C.M._Anglo_Bengali_College" class="position">.</a>
+						<p class="mt-4">Grade: 85.5%</p>
+					</div>
+				</div>
+
+				<!-- <div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2020-2021</span>
+						<h2>Intermediate Education</h2>
+						<span class="position">CM Anglo Bengali Inter College</span>
+						<p class="mt-4">Grade: First class distinction.</p>
+					</div>
+				</div> -->
+			</div>
+
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://github.com/Manishkannoujiya/Resume/blob/main/First%20Master%20Resume.pdf"
+							class="btn btn-primary py-4 px-5">Download CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML and some clones.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Manishkannoujiya/Amazon_SQL_Project" class="block-20 zoom-effect"
+							style="background-image: url('AmazonSQL.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/Manishkannoujiya/Amazon_SQL_Project"> Data
+									Analysis of Amazon using SQL</a></h3>
+							<p>Developed and optimized complex SQL queries to extract, analyze, and visualize
+								large-scale transactional data from Amazon's internal databases</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Manishkannoujiya/MRS_ML_Project" class="block-20 zoom-effect"
+							style="background-image: url('Movie.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/Manishkannoujiya/MRS_ML_Project">Build a
+									Movie Recommendation System using Python and Kaggle datasheet</a></h3>
+							<p>Built a content- and collaborative-based movie recommendation system using Python,
+								pandas, and scikit-learn, improving personalized user experience by analyzing user
+								ratings, genre preferences, and viewing history.
+
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/Manishkannoujiya/Spotify_SQL_Project" class="block-20 zoom-effect"
+							style="background-image: url('SpotifySQL.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/Manishkannoujiya/Spotify_SQL_Project">Data
+									Analysis of songs using SQL and Kggle Datasheet</a></h3>
+							<p>Utilized SQL to query and analyze Spotify’s music dataset, extracting insights on user
+								listening patterns, top-performing tracks, and genre trends to support data-driven
+								recommendations and marketing strategies.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Manishkannoujiya/Blinkit_dashboard" class="block-20 zoom-effect"
+							style="background-image: url('Snap.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/Manishkannoujiya/Blinkit_dashboard">Blinkit
+									Dashboard developed using Power BI</a></h3>
+							<p>This interactive dashboard is designed to offer deep insights into sales performance,
+								customer behavior, order trends, product categories, and operational efficiency.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Manishkannoujiya/Amazon_Clone_Project" class="block-20 zoom-effect"
+							style="background-image: url('Amazonclone.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Manishkannoujiya/Amazon_Clone_Project">Amazon e-commerce
+									website using HTML and CSS</a></h3>
+							<p>Developed a full-stack Amazon clone using HTML, CSS, replicating key e-commerce
+								functionalities such as user authentication, product listing, shopping cart, and payment
+								gateway integration.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Manishkannoujiya/IPL_Data_Analysis" class="block-20 zoom-effect"
+							style="background-image: url('IPL.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/Manishkannoujiya/IPL_Data_Analysis">IPL
+									dashboard and data analysis project using Tableau</a></h3>
+							<p>Designed an interactive IPL performance dashboard in Tableau by analyzing player
+								statistics, team performances, and match outcomes, enabling dynamic insights through
+								filters, KPIs, and visual storytelling.</p>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Manishkannoujiya/AI_Virtual_Assistance" class="block-20 zoom-effect"
+							style="background-image: url('AI.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Manishkannoujiya/AI_Virtual_Assistance">Smart AI Virtual
+									Assistant using MERN Stack</a></h3>
+							<p>Developed a Smart I Virtual Assistant using the MERN stack (MongoDB, Express.js,
+								React.js, Node.js), integrating natural language processing to handle user queries,
+								automate tasks, provide real-time responses, and deploy seamlessly on Render for web
+								accessibility and scalability.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Manishkannoujiya/Smart_Attendance-_System"
+							class="block-20 zoom-effect" style="background-image: url('1723990299036.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Manishkannoujiya/Smart_Attendance-_System">Face
+									Recognition-Based Biometric Attendance Management System </a></h3>
+							<p>Smart Attendance System is an automated solution that uses facial recognition or
+								biometric technology to track and record attendance accurately, reducing manual errors,
+								saving time, enhancing security, and providing real-time reporting for institutions,
+								organizations, or events.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Manishkannoujiya/Adaptive-Employee-Task-Allocation-System/tree/main"
+							class="block-20 zoom-effect" style="background-image: url('EMS.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Manishkannoujiya/Adaptive-Employee-Task-Allocation-System/tree/main">Digital
+									Employee Information & Performance Hub</a></h3>
+							<p>The Employee Management System is a software solution designed to streamline HR
+								operations, including employee records, attendance tracking, payroll processing,
+								performance evaluation, and task management, improving organizational efficiency,
+								accuracy, and decision-making through centralized digital management.</p>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(wall.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I have a deep passion for solving real-world business problems by diving into data and
+							extracting meaningful insights.I thrive on uncovering these hidden patterns and transforming
+							them into actionable strategies that drive measurable results. Whether it’s through building
+							intuitive dashboards, crafting predictive models, or streamlining complex datasets, I enjoy
+							bridging the gap between raw information and smart decision-making. </h4>
+						<br>
+						<p><a href="https://github.com/Manishkannoujiya" class="btn btn-primary py-3 px-5">GitHub</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Varanasi, Uttar Pradesh India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://9335098404">9335098404</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="m8031991@gmail.com">m8031991@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a
+								href="https://github.com/Manishkannoujiya/Resume/blob/main/First%20Master%20Resume.pdf">resumelink</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a href="https://forms.gle/gagVyYupWzWCwbYy9"
+									class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<li class="ftco-animate"><a href="https://www.youtube.com/@maani9389/posts"><span
+									class="icon-youtube"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/manish-kumar-845955269/"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://github.com/Manishkannoujiya"><span
+									class="icon-github"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.facebook.com/manish.kannojiya.37/"><span
+									class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.instagram.com/_via_lactea_4_/?hl=en"><span
+									class="icon-instagram"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
